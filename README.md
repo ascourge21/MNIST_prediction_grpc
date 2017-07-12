@@ -4,7 +4,7 @@ A simple grpc based implementation of server/client routine that classifies MNIS
 
 server script: classifier_server.py
 
-client script: classifier_client.py (an MNIST image pops up after you run this, need to close it first before a request is sent to the server because pyplot.show() blocks the process)
+client script: classifier_client.py (an MNIST image pops up after you run this, need to close it first before a request is sent to the server because pyplot.show() blocks the process. Also it takes some time to load the MNIST data.)
 
 
 proto file: clssifier.proto
