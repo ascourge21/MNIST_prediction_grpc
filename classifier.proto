@@ -1,0 +1,25 @@
+// proto file that facilitates the communication between the server and client
+// to compile: python3 -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. classifier.proto
+
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.grpc.examples.hasher";
+option java_outer_classname = "HasherProto";
+option objc_class_prefix = "HLW";
+
+// The greeting service definition.
+service Classifier {
+  // Sends a greeting
+  rpc classify_image (ClassifyRequest) returns (ClassifyReply) {}
+}
+
+// The request message containing the user's name.
+message ClassifyRequest {
+  string im_str = 1;
+}
+
+// The response message containing the greetings
+message ClassifyReply {
+  string message = 1;
+}
